@@ -1,7 +1,5 @@
-# homepage
+# homepage-angular
 
 
-
-https://angular.io/guide/styleguide
-
+A small project with Angular 8 as web framework.
 
