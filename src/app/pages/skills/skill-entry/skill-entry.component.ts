@@ -12,12 +12,15 @@ export class SkillEntryComponent implements OnInit, AfterViewInit {
   @ViewChild('skillEntryId', { static: false }) progressbarDivElem?: ElementRef<HTMLElement>;
 
   @Input() skill: Skill;
-  currentValue: number;
+  currentValue: string;
+
   constructor() { }
 
   ngAfterViewInit() {
     const percentage = this.skill.valueInPercentage;
     const durationValue = percentage * 80;
+
+    const that = this;
 
     const bar = new ProgressBar.Line(this.progressbarDivElem.nativeElement, {
       color: '#05A',
@@ -46,18 +49,13 @@ export class SkillEntryComponent implements OnInit, AfterViewInit {
 
     bar.animate(percentage / 100.0, {
       step() {
-        this.currentValue = bar.value() * 100;
+        that.currentValue = (bar.value() * 100).toFixed(0) + '%';
       }
     });
   }
 
   ngOnInit(): void {
-    this.currentValue = 0;
-    this.currentValue = this.skill.valueInPercentage;
-  }
-
-  DisplayValue() {
-    return this.currentValue + '%';
+    this.currentValue = '0%';
   }
 }
 
