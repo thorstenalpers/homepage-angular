@@ -9,14 +9,17 @@
           <div class="collapse navbar-collapse justify-content-center w-100" id="navbarSupportedContent"
               ng-controller="NavigationController">
               <ul class="navbar-nav">
-                  <li class="nav-item" ng-class="{ active: isActive('/')}">
-                      <a class="nav-link text-dark" routerLink="/">Über mich</a>
+                  <li class="nav-item">
+                      <a class="nav-link text-dark" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+                        true}">Über mich</a>
                   </li>
 
-                  <li class="nav-item" ng-class="{ active: isActive('/Kenntnisse')}">
-                      <a class="nav-link text-dark" routerLink="/Kenntnisse">Kenntnisse</a>
-                  <li class="nav-item" ng-class="{ active: isActive('/Lebenslauf')}">
-                      <a class="nav-link text-dark" routerLink="/Lebenslauf">Lebenslauf</a></li>
+                  <li class="nav-item">
+                      <a class="nav-link text-dark" routerLink="/Kenntnisse" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+                        true}">Kenntnisse</a>
+                  <li class="nav-item">
+                      <a class="nav-link text-dark" routerLink="/Lebenslauf" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+                        true}">Lebenslauf</a></li>
               </ul>
           </div>
           <div class="navbar-nav justify-content-end w-50">

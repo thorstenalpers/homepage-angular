@@ -18,8 +18,9 @@
     linear-gradient(to top, #FFF 0%, #ddd8 50%, #FFF 100%);
 }
 
-.nav-item>.nav-link.active {
+.nav-item>.nav-link.active-link {
   color: white;
+  font-weight: bold;
 }
 
 .navbar {
