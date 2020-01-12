@@ -12,12 +12,21 @@
 
 
 #particles-js {
-  z-index: -1 !important;
-  min-height: 500px;
-  max-height: 600px;
+  z-index: -1 !important;  
+  min-height: 400px !important;
+  height: 700px !important;
+  max-height: 800px !important;
   background: white;
 }
 
 canvas {
   display: block;
+}
+
+.particles-js-canvas-el {
+  z-index: -1 !important;  
+  min-height: 400px !important;
+  height: 700px !important;
+  max-height: 800px !important;
+
 }
